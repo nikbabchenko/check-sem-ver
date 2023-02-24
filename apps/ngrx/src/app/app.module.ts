@@ -8,6 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { isDevMode } from '@angular/core';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
+const devImports = [];
+
+if (isDevMode()) devImports.push(StoreDevtoolsModule.instrument());
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,6 +33,7 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     ),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot(),
+    ...devImports,
   ],
   providers: [],
   bootstrap: [AppComponent],

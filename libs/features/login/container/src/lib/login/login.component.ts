@@ -1,9 +1,18 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { LoginFacade } from '../+state/login.facade';
 
 @Component({
   selector: 'medium-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [LoginFacade]
 })
-export class LoginComponent {}
+export class LoginComponent implements OnInit {
+
+  constructor(private facade: LoginFacade) {}
+
+  ngOnInit() {
+    this.facade.init();
+  }
+}
