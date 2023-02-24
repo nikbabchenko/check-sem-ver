@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@medium-features/login-container": [
+        "libs/features/login/container/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
