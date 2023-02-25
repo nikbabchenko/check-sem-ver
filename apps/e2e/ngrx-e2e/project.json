@@ -1,5 +1,5 @@
 {
-  "name": "ngrx-e2e",
+  "name": "",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/ngrx-e2e/src",
   "projectType": "application",
