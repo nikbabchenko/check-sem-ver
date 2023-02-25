@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default {
-  displayName: 'features-login-container',
-  preset: '../../../../jest.preset.js',
+  displayName: 'features-auth',
+  preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -9,7 +9,7 @@ export default {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../../coverage/libs/features/login/container',
+  coverageDirectory: '../../../coverage/libs/features/auth',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

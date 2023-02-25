@@ -1,5 +1,5 @@
 {
-  "name": "@medium-features/login-container",
+  "name": "@medium-features/auth",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^15.1.0",

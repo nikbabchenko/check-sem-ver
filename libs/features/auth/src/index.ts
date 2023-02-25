@@ -9,6 +9,6 @@ export * from './lib/+state/login.facade';
 export * from './lib/+state/login.models';
 
 export { LoginActions, LoginFeature, LoginSelectors };
-export * from './lib/features-login-container.module';
+export * from './lib/features-auth.module';
 
 export * from './lib/lib.routes';

@@ -1,22 +1,22 @@
 {
-  "name": "features-login-container",
+  "name": "features-auth",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "libs/features/login/container/src",
+  "sourceRoot": "libs/features/auth/src",
   "prefix": "mm",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:package",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "libs/features/login/container/ng-package.json"
+        "project": "libs/features/auth/ng-package.json"
       },
       "configurations": {
         "production": {
-          "tsConfig": "libs/features/login/container/tsconfig.lib.prod.json"
+          "tsConfig": "libs/features/auth/tsconfig.lib.prod.json"
         },
         "development": {
-          "tsConfig": "libs/features/login/container/tsconfig.lib.json"
+          "tsConfig": "libs/features/auth/tsconfig.lib.json"
         }
       },
       "defaultConfiguration": "production"
@@ -25,7 +25,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/features/login/container/jest.config.ts",
+        "jestConfig": "libs/features/auth/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -40,8 +40,8 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "libs/features/login/container/**/*.ts",
-          "libs/features/login/container/**/*.html"
+          "libs/features/auth/**/*.ts",
+          "libs/features/auth/**/*.html"
         ]
       }
     }

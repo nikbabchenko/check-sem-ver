@@ -19,4 +19,4 @@ import { LoginFacade } from './+state/login.facade';
   declarations: [LoginComponent],
   providers: [LoginFacade],
 })
-export class FeaturesLoginContainerModule {}
+export class FeaturesAuthModule {}
