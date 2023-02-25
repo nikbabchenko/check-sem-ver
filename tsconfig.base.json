@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@medium-features/auth": ["libs/features/auth/src/index.ts"],
+      "@medium-features/main": ["libs/features/main/src/index.ts"],
       "@medium-ui/layout": ["libs/ui/layout/src/index.ts"]
     }
   },
