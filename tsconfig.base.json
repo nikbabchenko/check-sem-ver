@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@medium-features/auth": ["libs/features/auth/src/index.ts"]
+      "@medium-features/auth": ["libs/features/auth/src/index.ts"],
+      "@medium-ui/layout": ["libs/ui/layout/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
