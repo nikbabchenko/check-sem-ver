@@ -3,7 +3,7 @@
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "apps/ngrx/src",
-  "prefix": "medium",
+  "prefix": "mm",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
