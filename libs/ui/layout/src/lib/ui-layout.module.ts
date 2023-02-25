@@ -11,5 +11,6 @@ import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   imports: [CommonModule, MatToolbarModule, MatIconModule, MatButtonModule],
   declarations: [HeaderComponent, FooterComponent, PageLayoutComponent],
+  exports: [HeaderComponent, FooterComponent, PageLayoutComponent],
 })
 export class UiLayoutModule {}

@@ -10,6 +10,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { isDevMode } from '@angular/core';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { FeaturesMainModule } from '@medium-features/main';
 
 const devImports = [];
 
@@ -19,6 +20,7 @@ if (isDevMode()) devImports.push(StoreDevtoolsModule.instrument());
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    FeaturesMainModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
     BrowserAnimationsModule,
     StoreModule.forRoot(
