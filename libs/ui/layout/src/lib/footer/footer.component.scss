@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+.links {
+  display: flex;
+  margin-left: auto;
+
+  a {
+    font-size: 14px;
+    margin: 0 15px;
+  }
+}

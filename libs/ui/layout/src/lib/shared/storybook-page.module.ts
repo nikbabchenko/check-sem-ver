@@ -14,7 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    RouterModule.forRoot([]),
+    RouterModule,
   ],
   exports: [CommonModule, MatToolbarModule, MatIconModule, MatButtonModule],
 })

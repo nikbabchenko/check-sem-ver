@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  height: calc(100vh - 56px);
+}
+
+.wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: auto;
+}
+
+.content {
+  padding: 16px 12px;
+}
