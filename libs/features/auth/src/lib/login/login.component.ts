@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { LoginFacade } from '../+state/login.facade';
+import { LoginFacade } from './+state/login.facade';
 
 @Component({
   selector: 'mm-login',

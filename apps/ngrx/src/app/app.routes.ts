@@ -2,7 +2,7 @@ import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
   {
-    path: 'login',
+    path: '',
     loadChildren: () =>
       import('@medium-features/auth').then((m) => m.FeaturesAuthModule),
   },
