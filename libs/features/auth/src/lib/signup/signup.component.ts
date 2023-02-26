@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { RegistrationForm } from '../models';
 
 @Component({
   selector: 'mm-signup',
@@ -7,7 +8,7 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent {
-  form = this.fb.group({
+  form: FormGroup<RegistrationForm> = this.fb.group({
     username: '',
     email: '',
     password: '',

@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { SignInForm } from '../models';
 
 @Component({
   selector: 'mm-login',
@@ -9,7 +10,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   providers: [],
 })
 export class LoginComponent implements OnInit {
-  form = this.fb.group({
+  form: FormGroup<SignInForm> = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(6)]],
   });
