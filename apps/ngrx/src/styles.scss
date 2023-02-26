@@ -35,3 +35,31 @@ body {
   text-decoration: none;
   color: gray;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+  max-width: 100%;
+}
+
+.my-2 {
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.page-center {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+.submit-button {
+  margin-left: auto;
+}

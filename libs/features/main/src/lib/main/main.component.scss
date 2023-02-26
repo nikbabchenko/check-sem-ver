@@ -1,3 +1,13 @@
 :host {
   display: block;
 }
+
+.header {
+  margin-left: auto;
+
+  a {
+    margin: 0 15px;
+    color: #fff;
+    font-size: 14px;
+  }
+}

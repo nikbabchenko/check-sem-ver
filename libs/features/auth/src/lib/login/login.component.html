@@ -1,1 +1,25 @@
-Login component works
+<h1 class="mat-h4 text-center">Login</h1>
+
+
+<form (submit)="onSubmit()" [formGroup]="form" class="page-center">
+    <div class="row text-center my-2">
+        <a routerLink="/register" class="link">Need an account?</a>
+    </div>
+    <div class="row">
+        <mat-form-field class="full-width my-2">
+            <mat-label>Email</mat-label>
+            <input autocomplete="email" formControlName="email" matInput type="text">
+        </mat-form-field>
+    </div>
+
+    <div class="row">
+        <mat-form-field class="full-width my-2">
+            <mat-label>Password</mat-label>
+            <input autocomplete="current-password" formControlName="password" matInput type="password">
+        </mat-form-field>
+    </div>
+
+    <div class="flex">
+        <button type="submit" class="submit-button" mat-flat-button color="primary">Submit</button>
+    </div>
+</form>
