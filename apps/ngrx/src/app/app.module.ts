@@ -1,20 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
-import { appRoutes } from './app.routes';
+import { isDevMode } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StoreModule } from '@ngrx/store';
+import { RouterModule } from '@angular/router';
+import { FeaturesMainModule } from '@medium-features/main';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
-import { isDevMode } from '@angular/core';
+import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { FeaturesMainModule } from '@medium-features/main';
-
-const devImports = [];
-
-if (isDevMode()) devImports.push(StoreDevtoolsModule.instrument());
+import { AppComponent } from './app.component';
+import { appRoutes } from './app.routes';
 
 @NgModule({
   declarations: [AppComponent],
@@ -35,7 +31,10 @@ if (isDevMode()) devImports.push(StoreDevtoolsModule.instrument());
     ),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot(),
-    ...devImports,
+    StoreDevtoolsModule.instrument({
+      maxAge: 20,
+      logOnly: isDevMode(),
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

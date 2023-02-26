@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  OnInit,
+} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SignInForm } from '../models';
 
@@ -10,17 +15,22 @@ import { SignInForm } from '../models';
   providers: [],
 })
 export class LoginComponent implements OnInit {
-  form: FormGroup<SignInForm> = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required, Validators.minLength(6)]],
-  });
+  fb = inject(FormBuilder);
 
-  constructor(private fb: FormBuilder) {}
+  form!: FormGroup<SignInForm>;
 
   ngOnInit() {
     console.log(
       '🚀 ~ file: login.component.ts:14 ~ LoginComponent ~ ngOnInit ~ ngOnInit:'
     );
+    this.initForm();
+  }
+
+  initForm() {
+    this.form = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+    });
   }
 
   onSubmit() {
