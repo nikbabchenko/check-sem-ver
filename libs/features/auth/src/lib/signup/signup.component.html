@@ -28,6 +28,7 @@
     </div>
 
     <div class="flex">
-        <button type="submit" class="submit-button" mat-flat-button color="primary">Submit</button>
+        <button [disabled]="isSubmitting$ | async" type="submit" class="submit-button" mat-flat-button
+            color="primary">Submit</button>
     </div>
 </form>

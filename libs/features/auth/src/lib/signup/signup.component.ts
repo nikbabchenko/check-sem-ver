@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Store } from '@ngrx/store';
-import { register } from '../+state/action';
+import { select, Store } from '@ngrx/store';
+import { registerAction } from '../+state/action';
+import { isSubmittingSelector } from '../+state/selectors';
 import { CreateUserPayload, RegistrationForm } from '../models';
 
 @Component({
@@ -14,6 +15,7 @@ export class SignupComponent implements OnInit {
   httpClient = inject(HttpClient);
   fb = inject(FormBuilder);
   store = inject(Store);
+  isSubmitting$ = this.store.pipe(select(isSubmittingSelector));
 
   form!: FormGroup<RegistrationForm>;
 
@@ -32,7 +34,7 @@ export class SignupComponent implements OnInit {
   onSubmit() {
     if (this.form.valid) {
       this.store.dispatch(
-        register({
+        registerAction({
           user: this.form.value as CreateUserPayload,
         })
       );
