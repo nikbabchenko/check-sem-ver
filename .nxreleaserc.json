@@ -2,7 +2,7 @@
   "changelog": true,
   "npm": true,
   "github": false,
-  "repositoryUrl": "",
+  "repositoryUrl": "git@github.com:nikbabchenko/check-sem-ver.git",
   "branches": [
     "master"
   ]
