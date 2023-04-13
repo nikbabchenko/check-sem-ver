@@ -1,9 +1,9 @@
 {
   "changelog": true,
   "npm": true,
-  "github": false,
+  "github": true,
   "repositoryUrl": "git@github.com:nikbabchenko/check-sem-ver.git",
   "branches": [
-    "master"
+    "main"
   ]
 }
