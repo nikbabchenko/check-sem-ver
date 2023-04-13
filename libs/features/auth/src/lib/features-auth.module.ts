@@ -6,7 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
-import { authReducer } from './+state';
+import { authReducer, STATE_KEY } from './+state';
 import { authRoutes } from './lib.routes';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -21,7 +21,7 @@ import { SignupComponent } from './signup/signup.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    StoreModule.forFeature('auth', authReducer),
+    StoreModule.forFeature(STATE_KEY, authReducer),
   ],
 })
 export class FeaturesAuthModule {}

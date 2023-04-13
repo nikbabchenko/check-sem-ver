@@ -16,7 +16,6 @@ import { SignInForm } from '../models';
 })
 export class LoginComponent implements OnInit {
   fb = inject(FormBuilder);
-
   form!: FormGroup<SignInForm>;
 
   ngOnInit() {
